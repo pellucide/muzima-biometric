@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<neu:sampleInfo xmlns:neu="http://www.neurotechnology.com/SampleExplorer">
+	<neu:title>FIRecord Sample Java</neu:title>
+	<neu:description>
+	FIRecord sample application demonstrates how to use SDK in order to create FIRecord compatible templates, which can be used across different systems.
+	</neu:description>
+	<neu:tag>Java</neu:tag>
+	<neu:tag>Biometric Standards</neu:tag>
+	<neu:tag>Fingers</neu:tag>
+	<neu:tag>FIRecord</neu:tag>
+	<neu:tag>ANSI/INCIST 381-2004</neu:tag>
+	<neu:tag>ISO/IEC 19794-4:2005</neu:tag>
+	<neu:tag>VeriFinger Extended SDK</neu:tag>
+	<neu:tag>MegaMatcher Standard SDK</neu:tag>
+	<neu:tag>MegaMatcher Extended SDK</neu:tag>
+</neu:sampleInfo>

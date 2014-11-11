@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<neu:sampleInfo xmlns:neu="http://www.neurotechnology.com/SampleExplorer">
+	<neu:title>BioAPI Sample C++</neu:title>
+	<neu:description>BioAPI samples are used to demonstrate how to use Biometric
+Application programming interface (BioAPI). Application uses MFC framework.</neu:description>
+	<neu:tag>C++</neu:tag>
+	<neu:tag>MFC</neu:tag>
+	<neu:tag>BioAPI</neu:tag>
+	<neu:tag>VeriFinger Extended</neu:tag>
+	<neu:tag>VeriLook Extended</neu:tag>
+	<neu:tag>VeriEye Extended</neu:tag>
+	<neu:tag>MegaMatcher Standard SDK</neu:tag>
+	<neu:tag>MegaMatcher Extended SDK</neu:tag>
+</neu:sampleInfo>

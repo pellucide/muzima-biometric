@@ -1,0 +1,21 @@
+#ifndef CBEFF_QUALITY_ALGORITHM_IDENTIFIERS_H_INCLUDED
+#define CBEFF_QUALITY_ALGORITHM_IDENTIFIERS_H_INCLUDED
+
+#include <Core/NTypes.h>
+
+#ifdef N_CPP
+extern "C"
+{
+#endif
+
+#define CBEFF_QAI_INTECH_QM 0x001A
+
+#define CBEFF_QAI_NIST_NFIQ 0x377D
+
+N_DECLARE_STATIC_OBJECT_TYPE(CbeffQualityAlgorithmIdentifiers)
+
+#ifdef N_CPP
+}
+#endif
+
+#endif // !CBEFF_QUALITY_ALGORITHM_IDENTIFIERS_H_INCLUDED

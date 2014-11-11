@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Licensing manager</string>
+	<string name="msg_service">Service</string>
+	<string name="msg_configure">Configure</string>
+	<string name="msg_configuration">Configuration</string>
+	<string name="msg_format_configuration">Configuration:\n%1$s</string>
+	<string name="msg_format_log">Log:\n%1$s</string>
+	<string name="msg_format_status">Status: %1$s</string>
+	<string name="msg_format_trial">Trial: %1$s</string>
+	<string name="msg_log">Log</string>
+	<string name="msg_obtain">Obtain</string>
+	<string name="msg_release">Release</string>
+	<string name="msg_start">Start</string>
+	<string name="msg_starting_service">Starting service</string>
+	<string name="msg_stopping_service">Stopping service</string>
+	<string name="msg_stop">Stop</string>
+	<string name="msg_status">Status</string>
+	<string name="msg_trial">Trial</string>
+	<string name="msg_updating">Updating…</string>
+	<string name="msg_unknown">Unknown</string>
+</resources>

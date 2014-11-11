@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<neu:sampleInfo xmlns:neu="http://www.neurotechnology.com/SampleExplorer">
+	<neu:title>ANTemplate Sample Java</neu:title>
+	<neu:description>
+ANTemplate sample application demonstrates how to use SDK in order to create or read ANTemplate compatible templates, which can be used accross different systems.
+	</neu:description>
+	<neu:tag>Java</neu:tag>
+	<neu:tag>Biometric Standards</neu:tag>
+	<neu:tag>Faces</neu:tag>
+	<neu:tag>Fingers</neu:tag>
+	<neu:tag>Irises</neu:tag>
+	<neu:tag>Palms</neu:tag>
+	<neu:tag>ANSI/NIST-ITL 1-2000</neu:tag>
+	<neu:tag>ANTemplate</neu:tag>
+	<neu:tag>MegaMatcher Standard SDK</neu:tag>
+	<neu:tag>MegaMatcher Extended SDK</neu:tag>
+</neu:sampleInfo>
