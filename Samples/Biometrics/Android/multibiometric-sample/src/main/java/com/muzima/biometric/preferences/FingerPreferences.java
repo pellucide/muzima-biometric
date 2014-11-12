@@ -1,24 +1,19 @@
-package com.neurotec.samples.multibiometric.fingers.preference;
+package com.muzima.biometric.preferences;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceManager;
-import android.preference.PreferenceScreen;
+import android.preference.*;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
-
+import com.muzima.biometric.Model;
+import com.muzima.biometric.view.BasePreferenceFragment;
 import com.neurotec.biometrics.NMatchingSpeed;
 import com.neurotec.biometrics.NTemplateSize;
 import com.neurotec.biometrics.client.NBiometricClient;
 import com.neurotec.devices.NDevice;
 import com.neurotec.devices.NDeviceType;
-import com.neurotec.samples.multibiometric.Model;
 import com.neurotec.samples.multibiometric.R;
-import com.neurotec.samples.multibiometric.view.BasePreferenceFragment;
 
 import java.util.ArrayList;
 import java.util.List;

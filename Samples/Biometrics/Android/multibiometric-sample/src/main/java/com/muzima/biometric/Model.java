@@ -1,14 +1,13 @@
-package com.neurotec.samples.multibiometric;
+package com.muzima.biometric;
 
 import android.util.Log;
-
+import com.muzima.biometric.preferences.FingerPreferences;
 import com.neurotec.biometrics.NSubject;
 import com.neurotec.biometrics.client.NBiometricClient;
 import com.neurotec.devices.NDevice;
 import com.neurotec.devices.NDeviceManager;
 import com.neurotec.lang.NCore;
 import com.neurotec.plugins.NPlugin;
-import com.neurotec.samples.multibiometric.fingers.preference.FingerPreferences;
 import com.neurotec.samples.util.IOUtils;
 
 public final class Model {

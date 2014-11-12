@@ -1,4 +1,4 @@
-package com.neurotec.samples.multibiometric.view;
+package com.muzima.biometric.view;
 
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;

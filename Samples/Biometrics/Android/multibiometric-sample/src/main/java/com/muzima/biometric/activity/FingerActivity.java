@@ -1,4 +1,4 @@
-package com.neurotec.samples.multibiometric.fingers;
+package com.muzima.biometric.activity;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,7 +11,7 @@ import android.view.Gravity;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
+import com.muzima.biometric.preferences.FingerPreferences;
 import com.neurotec.biometrics.NBiometricStatus;
 import com.neurotec.biometrics.NFinger;
 import com.neurotec.biometrics.NSubject;
@@ -24,9 +24,7 @@ import com.neurotec.devices.NDeviceType;
 import com.neurotec.devices.NFScanner;
 import com.neurotec.images.NImage;
 import com.neurotec.samples.licensing.LicensingManager;
-import com.neurotec.samples.multibiometric.BiometricActivity;
 import com.neurotec.samples.multibiometric.R;
-import com.neurotec.samples.multibiometric.fingers.preference.FingerPreferences;
 import com.neurotec.samples.util.NImageUtils;
 import com.neurotec.samples.util.ResourceUtils;
 

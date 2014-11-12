@@ -1,4 +1,4 @@
-package com.neurotec.samples.multibiometric.view;
+package com.muzima.biometric.view;
 
 import android.app.Activity;
 import android.app.AlertDialog;

@@ -1,4 +1,5 @@
-package com.neurotec.samples.multibiometric.util;
+package com.muzima.biometric.util;
+
 
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
