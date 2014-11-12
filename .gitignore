@@ -1,6 +1,11 @@
 .idea
 .DS_Store
 *.iml
+*.class
 classes/
 apklib/
 target/
+Bin/
+Samples/Biometrics/Android/multibiometric-sample/target/**
+Samples/Biometrics/Android/multibiometric-sample/target/classes
+Samples/Biometrics/Android/multibiometric-sample/target/generated-sources/
