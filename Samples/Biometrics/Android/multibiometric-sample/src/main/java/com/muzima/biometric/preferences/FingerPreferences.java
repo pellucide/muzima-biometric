@@ -7,13 +7,13 @@ import android.preference.*;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 import com.muzima.biometric.Model;
+import com.muzima.biometric.R;
 import com.muzima.biometric.view.BasePreferenceFragment;
 import com.neurotec.biometrics.NMatchingSpeed;
 import com.neurotec.biometrics.NTemplateSize;
 import com.neurotec.biometrics.client.NBiometricClient;
 import com.neurotec.devices.NDevice;
 import com.neurotec.devices.NDeviceType;
-import com.neurotec.samples.multibiometric.R;
 
 import java.util.ArrayList;
 import java.util.List;

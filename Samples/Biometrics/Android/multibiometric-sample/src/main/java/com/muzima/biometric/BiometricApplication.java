@@ -2,7 +2,6 @@ package com.muzima.biometric;
 
 import android.app.Application;
 import android.util.Log;
-import com.neurotec.samples.multibiometric.R;
 import com.neurotec.samples.report.CrashReporter;
 import com.neurotec.samples.util.EnvironmentUtils;
 import org.acra.ACRA;

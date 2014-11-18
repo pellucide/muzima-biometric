@@ -4,9 +4,7 @@
 	<!--  Common						-->
 	<!-- ============================== -->
 
-	<string name="app_name">Biometrics</string>
-    <string name="about_dialog_title">About Neurotechnology</string>
-    <string name="msg_another_task_in_progress">Another task is in progress at the moment</string>
+	<string name="app_name">mUzima-Biometrics</string>
 
 	<string name="msg_about_company">Neurotechnology</string>
 	<string name="msg_camera_is_not_available">Camera is not available</string>
@@ -237,7 +235,7 @@
 	<!--  Fingers						-->
 	<!-- ============================== -->
 
-	<string name="finger_app_name">VeriFinger</string>
+	<string name="finger_app_name">mUzima FingerPrint scan</string>
 
 	<!-- Preferences  -->
 	<string name="preferences_finger_matcher_speed">Speed</string>
@@ -246,30 +244,57 @@
 	<string name="preferences_finger_matcher_min_matched_finger_count_threshold">Minimal matched finger count threshold</string>
 	<string name="preferences_finger_capturing_device">Finger capturing device</string>
 
-	<!-- ============================== -->
-	<!--  Voices						-->
-	<!-- ============================== -->
+    <!-- Licenses -->
+    <string name="msg_licenses_obtained">Licenses were obtained</string>
+    <string name="msg_licenses_not_obtained">Licenses were NOT obtained</string>
+    <string name="msg_obtaining_licenses">Obtaining licenses…</string>
+    <string name="format_obtaining_licenses">Obtaining licenses: %1$s</string>
+    <string name="format_not_activated">Not activated: %1$s</string>
 
-	<string name="voice_app_name">VeriSpeak</string>
-	<string name="msg_no_audio_device">No audio recording device found</string>
-	<string name="msg_say_your_phrase">Please say your phrase</string>
-	<string name="msg_template_not_extracted">Template was not extracted</string>
-	<string name="msg_template_extracted">Template extracted</string>
-	<string name="msg_user_id_must_be_unique_and_non_empty">User id must be unique and non-empty</string>
-	<string name="msg_verifying_please_wait_">Verifying. Please wait…</string>
-	<string name="msg_choose_template_to_verify_with">Please choose a template to verify with</string>
-	<string name="msg_using_unique_phrase_only">Using unique phrase only</string>
-	<string name="msg_voice_detected">Voice detected</string>
-	<string name="msg_voice_not_detected">Voice not detected</string>
+    <!-- Messages - Positive -->
+    <string name="msg_template_created">Template created.</string>
+    <string name="msg_templates_matched">Templates matched.</string>
+    <string name="format_records_found">%1$d records found.</string>
+    <string name="format_finger_record_saved_to">Finger record saved to %1$s</string>
+    <string name="format_template_saved_to">Template saved to %1$s</string>
+    <string name="format_finger_image_saved_to">Finger image saved to %1$s</string>
+    <string name="format_extraction_failed">Extraction failed: %1$s</string>
+    <string name="format_capturing_from_device_put_finger">Capturing from %1$s device. Please put your finger on the device.</string>
+    <string name="format_n_fingers">%1$d fingers</string>
 
 	<!-- Preferences -->
 	<string name="preferences_voice_unique_phrases_only">Unique phrases only</string>
 	<string name="preferences_voice_extract_text_dependent_features">Extract text dependent features</string>
 	<string name="preferences_voice_extract_text_independent_features">Extract text independent features</string>
 
-	<!-- ============================== -->
-	<!--  Irises						-->
-	<!-- ============================== -->
+    <!-- NF Record -->
+    <string name="format_template_g">\tG: %1$d</string>
+    <string name="format_impression_type">\tImpression type: %1$s</string>
+    <string name="format_pattern_class">\tPattern class: %1$s</string>
+    <string name="format_cbeff_product_type">\tCBEFF product type: %1$d</string>
+    <string name="format_position">\tPosition: %1$s</string>
+    <string name="format_ridge_counts_type">\tRidge counts type: %1$s</string>
+    <string name="format_width">\tWidth: %1$d</string>
+    <string name="format_height">\tHeight: %1$d</string>
+    <string name="format_horizontal_resolution">\tHorizontal resolution: %1$d</string>
+    <string name="format_vertical_resolution">\tVertical resolution: %1$d</string>
+    <string name="format_template_quality">\tQuality: %1$d</string>
+    <string name="format_size">\tSize: %1$d</string>
+    <string name="format_minutia_count">\tMinutia count: %1$d</string>
+    <string name="format_minutia_n_of_m">\tMinutia %1$d of %2$d</string>
+    <string name="format_x">\tx: %1$d</string>
+    <string name="format_y">\ty: %1$d</string>
+    <string name="format_angle">\tangle: %1$d</string>
+    <string name="format_angle1">\tangle1: %1$d</string>
+    <string name="format_angle2">\tangle2: %1$d</string>
+    <string name="format_angle3">\tangle3: %1$d</string>
+    <string name="format_minutia_quality">\tquality: %1$d</string>
+    <string name="format_minutia_g">\tg: %1$d</string>
+    <string name="format_curvature">\tcurvature: %1$d</string>
+    <string name="format_delta_n_of_m">\tDelta %1$d of %2$d</string>
+    <string name="format_core_n_of_m">\tCore %1$d of %2$d</string>
+    <string name="format_double_core_n_of_m">\tDouble core %1$d of %2$d</string>
+    <string name="format_phrase_id">\tPhrase id: %1$d</string>
 
 	<string name="iris_app_name">VeriEye</string>
 

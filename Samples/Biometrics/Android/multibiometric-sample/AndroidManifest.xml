@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.neurotec.samples.multibiometric"
+	package="com.muzima.biometric"
 	android:versionCode="1"
 	android:versionName="5.0.0.0">
 
@@ -29,8 +29,7 @@
 	<application
 		android:hardwareAccelerated="true"
 		android:name="BiometricApplication"
-		package="com.neurotec.samples.multibiometric"
-		android:icon="@com.neurotec.samples.multibiometric:drawable/ic_neurotechnology_logo"
+		package="com.muzima.biometric"
 		android:theme="@android:style/Theme.Holo.Light"
 		android:label="@string/app_name">
 
@@ -58,7 +57,7 @@
 
 		<!-- Faces -->
 		<activity
-			android:name=".fingers.FingerActivity"
+			android:name=".activity.FingerActivity"
 			android:label="@string/finger_app_name"
 			android:taskAffinity="com.neurotec.samples.multibiometric.finger"
 			android:screenOrientation="portrait">
@@ -68,7 +67,7 @@
 			</intent-filter>
 		</activity>
 
-		<activity android:name=".fingers.preference.FingerPreferences"
+		<activity android:name=".preferences.FingerPreferences"
 				android:parentActivityName="com.neurotec.samples.multibiometric.fingers.FingerActivity" >
 			<meta-data
 					android:name="android.support.PARENT_ACTIVITY"
