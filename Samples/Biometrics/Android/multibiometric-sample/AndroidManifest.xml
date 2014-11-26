@@ -55,7 +55,6 @@
 		<activity android:name="com.neurotec.samples.licensing.preference.LicensingPreferences"></activity>
 		<activity android:name="com.neurotec.samples.licensing.preference.LicensingServicePreferences"></activity>
 
-		<!-- Faces -->
 		<activity
 			android:name=".activity.FingerActivity"
 			android:label="@string/finger_app_name"
@@ -67,7 +66,18 @@
 			</intent-filter>
 		</activity>
 
-		<activity android:name=".preferences.FingerPreferences"
+        <activity
+                android:name=".activity.IdentifyActivity"
+                android:label="@string/finger_app_name"
+                android:taskAffinity="com.neurotec.samples.multibiometric.finger"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".preferences.FingerPreferences"
 				android:parentActivityName="com.neurotec.samples.multibiometric.fingers.FingerActivity" >
 			<meta-data
 					android:name="android.support.PARENT_ACTIVITY"

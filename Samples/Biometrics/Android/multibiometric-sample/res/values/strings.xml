@@ -142,8 +142,11 @@
 	<string name="msg_capture_error">Capture error</string>
 	<string name="msg_communication_error">Communication error</string>
 	<string name="msg_internal_error">Internal error</string>
+    <string name="format_template_identified_score">=&#62; Template [%1$s] identified. Score: %2$d.</string>
+    <string name="format_template_not_identified_score">=&#62; Template [%1$d] not identified. Score: %2$d.</string>
+    <string name="format_identification_unsuccessful">Identification was unsuccessful. Status: %1$s</string>
 
-	<!-- ============================== -->
+    <!-- ============================== -->
 	<!--  Preferences					-->
 	<!-- ============================== -->
 
