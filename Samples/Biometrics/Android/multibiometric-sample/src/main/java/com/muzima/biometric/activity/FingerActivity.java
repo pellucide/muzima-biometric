@@ -23,7 +23,6 @@ import com.neurotec.util.concurrent.CompletionHandler;
 
 import java.util.Arrays;
 import java.util.EnumSet;
-import java.util.List;
 
 public final class FingerActivity extends Activity implements LicensingManager.LicensingStateCallback {
 
@@ -34,8 +33,6 @@ public final class FingerActivity extends Activity implements LicensingManager.L
     private TextView mResult;
     private ProgressDialog mProgressDialog;
     private NBiometricClient mBiometricClient;
-    private String base64String;
-    private List<String> fingerPrintMinutiaeList;
 
     private CompletionHandler<NBiometricStatus, NSubject> completionHandler = new CompletionHandler<NBiometricStatus, NSubject>() {
         @Override
@@ -159,3 +156,7 @@ public final class FingerActivity extends Activity implements LicensingManager.L
     }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Finger print scanning and identification now working.
