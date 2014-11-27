@@ -155,8 +155,3 @@ public final class FingerActivity extends Activity implements LicensingManager.L
         mBiometricClient.createTemplate(subject, subject, completionHandler);
     }
 }
-
-<<<<<<< HEAD
-=======
-
->>>>>>> Finger print scanning and identification now working.
