@@ -10,7 +10,9 @@
 	<artifactId>multibiometric-sample-android</artifactId>
 	<packaging>apk</packaging>
 	<name>Multibiometric Sample</name>
-	<build>
+
+
+    <build>
 		<finalName>multibiometric-sample</finalName>
 		<plugins>
 			<plugin>
@@ -121,7 +123,14 @@
 			<artifactId>neurotec-devices-media-android</artifactId>
 			<version>5.0.0.0</version>
 		</dependency>
-	</dependencies>
+        <!--<dependency>-->
+            <!--<groupId>muzima-biometric-intent-models</groupId>-->
+            <!--<artifactId>muzima-biometric-intent-models</artifactId>-->
+            <!--<scope>system</scope>-->
+            <!--<version>1.0</version>-->
+            <!--<systemPath>${product.root.directory}/Lib/muzima-biometric-intent-models.jar</systemPath>-->
+        <!--</dependency>-->
+    </dependencies>
 	<properties>
 		<product.root.directory>${basedir}/../../../..</product.root.directory>
 	</properties>

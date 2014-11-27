@@ -5,9 +5,12 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.widget.TextView;
 import com.muzima.biometric.R;
+import com.muzima.biometric.model.PatientModel;
+import com.muzima.biometric.model.PatientModels;
 import com.neurotec.biometrics.*;
 import com.neurotec.biometrics.client.NBiometricClient;
 import com.neurotec.devices.NDeviceManager;
@@ -18,6 +21,7 @@ import com.neurotec.samples.licensing.LicensingState;
 import com.neurotec.util.concurrent.CompletionHandler;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -29,7 +33,7 @@ public final class IdentifyActivity extends Activity implements LicensingManager
     private NTemplate capturedTemplate;
     private NSubject candidateSubject;
     private NSubject probeSubject;
-
+    private PatientModels patientModels;
     private static final String[] LICENSES = {
             LicensingManager.LICENSE_FINGER_MATCHING,
             LicensingManager.LICENSE_FINGER_MATCHING_FAST,
@@ -169,14 +173,18 @@ public final class IdentifyActivity extends Activity implements LicensingManager
     }
 
     private void enrollImageSent() {
-        Intent intent = getIntent();
-        byte[] templateBuffers = intent.getByteArrayExtra("templateBuffer");
-        String id = intent.getStringExtra("patientName");
-        NTemplate template = new NTemplate(new NBuffer(templateBuffers));
+        NBiometricTask enrollTask = mBiometricClient.createTask(EnumSet.of(NBiometricOperation.ENROLL), null);
         try {
-            this.candidateSubject = createSubject(template, id);
-            NBiometricTask enrollTask = mBiometricClient.createTask(EnumSet.of(NBiometricOperation.ENROLL), this.candidateSubject);
-            mBiometricClient.performTask(enrollTask, NBiometricOperation.ENROLL, completionHandler);
+            if (this.patientModels.getPatientModels().size() > 0) {
+                for (PatientModel patientModel : this.patientModels.getPatientModels()) {
+                    byte[] templateBuffer = Base64.decode(patientModel.getTemplateBuffer(), Base64.DEFAULT);
+                    NTemplate template = new NTemplate(new NBuffer(templateBuffer));
+                    enrollTask.getSubjects().add(createSubject(template, patientModel.getId()));
+                }
+                mBiometricClient.performTask(enrollTask, NBiometricOperation.ENROLL, completionHandler);
+            } else {
+                returnIntent(null);
+            }
         } catch (Exception e) {
             showMessage(e.getMessage());
         }
@@ -186,6 +194,13 @@ public final class IdentifyActivity extends Activity implements LicensingManager
         mBiometricClient = new NBiometricClient();
         mBiometricClient.setMatchingThreshold(48);
         mBiometricClient.setFingersMatchingSpeed(NMatchingSpeed.LOW);
+
+        Bundle bundle = getIntent().getExtras();
+        this.patientModels = (PatientModels) bundle.getSerializable("fingersToEnroll");
+        if (this.patientModels == null) {
+            this.patientModels = new PatientModels(new ArrayList<PatientModel>());
+        }
+
         capture();
     }
 

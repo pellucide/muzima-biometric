@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.widget.TextView;
 import com.muzima.biometric.R;
@@ -55,7 +56,7 @@ public final class FingerActivity extends Activity implements LicensingManager.L
 
     private void returnIntent(NBuffer nBuffer) {
         Intent intent = new Intent();
-        intent.putExtra("templateBuffer", nBuffer.toByteArray());
+        intent.putExtra("templateBuffer", Base64.encodeToString(nBuffer.toByteArray(), Base64.DEFAULT));
         setResult(RESULT_OK, intent);
         finish();
     }
