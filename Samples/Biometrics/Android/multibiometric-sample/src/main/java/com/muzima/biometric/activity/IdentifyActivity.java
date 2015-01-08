@@ -16,6 +16,7 @@ import com.neurotec.biometrics.client.NBiometricClient;
 import com.neurotec.devices.NDeviceManager;
 import com.neurotec.devices.NDeviceType;
 import com.neurotec.io.NBuffer;
+import com.neurotec.lang.NCore;
 import com.neurotec.samples.licensing.LicensingManager;
 import com.neurotec.samples.licensing.LicensingState;
 import com.neurotec.util.concurrent.CompletionHandler;
@@ -81,14 +82,16 @@ public final class IdentifyActivity extends Activity implements LicensingManager
                     break;
                 case IDENTIFY:
                     if (result.getStatus() == NBiometricStatus.OK) {
-                        showMessage(result.getSubjects().get(0).getMatchingResults().toString());
                         for (NMatchingResult matchingResult : result.getSubjects().get(0).getMatchingResults()) {
                             showMessage(getString(R.string.format_template_identified_score, matchingResult.getId(), matchingResult.getScore()));
                             returnIntent(matchingResult.getId());
+                            return;
                         }
+                        returnIntent("PATIENT_NOT_FOUND");
                     } else {
                         showMessage(getString(R.string.format_identification_unsuccessful, result.getStatus()));
-                        returnIntent(null);
+                        returnIntent("PATIENT_NOT_FOUND");
+                        return;
                     }
                     break;
                 default:
@@ -113,11 +116,13 @@ public final class IdentifyActivity extends Activity implements LicensingManager
     private void capture() {
         if (!LicensingManager.isActivated(LicensingManager.LICENSE_FINGER_DEVICES_SCANNERS)) {
             showMessage(getString(R.string.format_not_activated, LicensingManager.LICENSE_FINGER_DEVICES_SCANNERS));
-            return; // The following operation is not activated, so return
+            returnIntent(null); // The following operation is not activated, so return
+            return;
         }
         if (!LicensingManager.isFingerExtractionActivated()) {
             showMessage(getString(R.string.format_not_activated, LicensingManager.LICENSE_FINGER_EXTRACTION));
-            return; // The following operation is not activated, so return
+            returnIntent(null); // The following operation is not activated, so return
+            return;
         }
         mBiometricClient = new NBiometricClient();
         NSubject subject = new NSubject();
@@ -133,6 +138,7 @@ public final class IdentifyActivity extends Activity implements LicensingManager
             System.out.format("Found %d fingerprint scanner\n", devices.size());
         } else {
             showMessage(getString(R.string.msg_capturing_device_is_unavailable));
+            returnIntent(null);
             return;
         }
 
@@ -207,6 +213,7 @@ public final class IdentifyActivity extends Activity implements LicensingManager
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        NCore.setContext(this);
         setContentView(R.layout.tutorials_plain);
         mResult = (TextView) findViewById(R.id.tutorials_results);
         LicensingManager.getInstance().obtain(this, this, Arrays.asList(LICENSES));
